@@ -30,22 +30,20 @@ class TimeLogicAdapter(LogicAdapter):
             raise OptionalDependencyImportError(message)
 
         self.positive = kwargs.get('positive', [
-            'what time is it',
-            'hey what time is it',
-            'do you have the time',
-            'do you know the time',
-            'do you know what time it is',
-            'what is the time'
+            'Que horas são?',
+            'Que horas são agora?',
+            'Você sabe as horas?',
+            'Qual é o horário atual?',
+            'Você sabe me dizer as horas?'
         ])
 
         self.negative = kwargs.get('negative', [
-            'it is time to go to sleep',
-            'what is your favorite color',
-            'i had a great time',
-            'thyme is my favorite herb',
-            'do you have time to look at my essay',
-            'how do you have the time to do all this'
-            'what is it'
+            'É hora de ir dormir',
+            'Qual é sua cor favorita?',
+            'Eu tive momentos incríveis!',
+            'Você tem um tempo para ver meus ensaios?',
+            'E você tem tempo para fazer tudo isso?'
+            'O que é isso?'
         ])
 
         labeled_data = (
