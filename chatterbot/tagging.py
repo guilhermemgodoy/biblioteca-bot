@@ -6,7 +6,7 @@ import spacy
 class PosLemmaTagger(object):
 
     def __init__(self, language=None):
-        self.language = language or languages.ENG
+        self.language = language or languages.POR
 
         self.punctuation_table = str.maketrans(dict.fromkeys(string.punctuation))
 
