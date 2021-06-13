@@ -8,9 +8,9 @@ from difflib import SequenceMatcher
 
 class Comparator:
 
-    def __init__(self, language):
+    def __init__(self, language=None):
 
-        self.language = language
+        self.language = language or language.POR
 
     def __call__(self, statement_a, statement_b):
         return self.compare(statement_a, statement_b)
