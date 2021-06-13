@@ -9,11 +9,7 @@ class PosLemmaTagger(object):
         self.language = language
 
         self.punctuation_table = str.maketrans(dict.fromkeys(string.punctuation))
-
-        if self.language.ISO_639_1.lower() == 'en':
-            self.nlp = spacy.load('pt_core_news_sm')
-        else:
-            self.nlp = spacy.load(self.language.ISO_639_1.lower())
+        self.nlp = spacy.load('pt_core_news_sm')
 
     def get_bigram_pair_string(self, text):
         """
